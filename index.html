@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="css/main.css" rel="stylesheet" />
+</head>
+<body>
+	<section class="clearfix"> 
+			<ul class="tab_list">
+				<li class="on">전체</li>
+				<li>할인혜택</li>
+				<li>멤버십</li>
+				<li>구매혜택</li>
+				<li>이벤트</li>
+				<li>데이터</li>
+				<li>결합</li>
+				<li>핫딜</li>
+			</ul>
+			<div class="tab_cont">	
+				<ul class="clearfix on">
+					<li><img src="img/visual01.png" alt="" /></li>
+					<li><img src="img/visual02.png" alt="" /></li>
+					<li><img src="img/visual02.png" alt="" /></li>
+					<li><img src="img/visual02.png" alt="" /></li>
+					<li><img src="img/visual02.png" alt="" /></li>
+				</ul>
+				<ul class="clearfix">
+					<li><img src="img/visual02.png" alt="" /></li>
+					<li><img src="img/visual01.png" alt="" /></li>
+					<li><img src="img/visual02.png" alt="" /></li>
+					<li><img src="img/visual01.png" alt="" /></li>
+					<li><img src="img/visual02.png" alt="" /></li> 
+					 
+				</ul>
+			</div>
+	</section>
+	<script src="lib/jquery-3.0.0.min.js"></script>
+	<script>
+		$(function(){
+			$('.tab_list li').click(function(){
+				$('.tab_list li').removeClass('on');
+				$(this).addClass('on');
+				$('.tab_cont ul').removeClass('on');
+				$('.tab_cont ul').eq($(this).index()).addClass('on');
+			});
+		});
+	</script>
+</body>
+</html>
